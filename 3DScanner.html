@@ -36,12 +36,35 @@
 								<header class="major">
 									<!--<span class="date">April 25, 2017</span>-->
 									<h2><a>3D Scanner</a></h2>
-									<p>As part of my Principles of Engineering class, in a team of two, built a
+									<p>As part of my Principles of Engineering class, in a team of two, we built a
 									3D Scanner out of an IR distance sensor and a pan-tilt mechanism - built out of
-									servo motors. Managed to get a 3D plot of a cardboard cutout of the letter
-									"W" - for William, my partner. </p>
+									servo motors. Aside from helping calibrate the sensors and helping
+								with circuitry, my main responsibility was to make the pan-ilt mechanism for the scanner.</p>
 									<a class="image main"><img src="images/3DScanner.jpg" alt="" /></a>
 								</header
+
+								<p>The primary goal, when designing the pan-tilt mechanism, was for the axes of rotation of
+									both of the servos to go through the IR sensor, so that the IR sensor would not be translated as it was rotating.
+									This was probably the most important design consideration that I made, because with a mechanism that did not translate
+									the IR sensor, the post-processing that we had to do decreased remarkably - since we no longer had to keep track of the
+									position of the sensor, orientation gave us all the information we needed.
+								</p>
+
+								<a class="image main"><img src="images/3DScannerCAD.PNG" alt="" /></a>
+								<p> Since I was not trained to use the 3D printers at Olin until after this project, I decided to use a laser-cutter to make
+									this mechanism out of HDF. I designed all the parts with finger joints in Solidworks, with enough tolerance to account for wood
+									glue that help together the components. As can be seen in the CAD assembly above, the final product consisted
+									of a platform that held one servo in place and two brackets that held the other servo and the IR sensor.
+								</p>
+
+								<a class="image main"><img src="images/3DScannerInScan.jpg" alt="" /></a>
+								<p> One thing that I failed to think ahead about was the torque that the servos output as they spin. Even though the stand held
+									the the system in place as it was doing a scan, I decided to secure the assembly to the table with bar-clamps, to ensure it does
+									not spin during one of its fast turns. When we were done, we managed to get a really accurate 3D scan of the carboard cut-out "W" letter,
+									as seen in the image below.
+								</p>
+								<a class="image main"><img src="images/3DScannerOutcome.png" alt="" /></a>
+								<p><a href="https://github.com/juicyslew/POE_Scanner">GitHub Repo</a></p>
 							</section>
 
 				<!-- Footer -->

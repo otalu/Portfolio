@@ -33,9 +33,55 @@
 				<!-- Main -->
 					<div id="main">
               <section>
-                <p>
-                  Line follower
-                </p>
+								<header class="major">
+									<!--<span class="date">April 25, 2017</span>-->
+									<h2><a>PID Line Follower</a></h2>
+									<p>As part of my Principles of Engineering class, in a team of two,
+										we built a PID controlled robot that can follow a certain path on the floor,
+										drawn with black tape. Along with designing the motor and sensor mounts for the robot, I designed parts
+										electrical components, and helped improve the control loop.
+										At the end of the lab, we managed to complete the track in 39 seconds.</p>
+									<a class="image main"><img src="images/PIDLineFollower.jpg" alt="" /></a>
+								</header
+
+								<p>We were given a chassis, motors and wheels to use in this lab, and we were not
+									allowed to permanently change the chassis at all. Since we were supposed to go around a
+									track that had a lot of hard turns, I realized that putting too much weight on the robot
+									would result in a lot of slippage, therefore I decided to use the 3D printer to print the materials
+									in plastic.
+								</p>
+								<a class="image main"><img src="images/PIDLineFollowerMount.PNG" alt="" /></a>
+								<p>Since we had to get power from a wall outlet (one of the requirements), my partner and I made a 12V barrel jack
+									to Molex connector adapter, along with another Molex connector that powered our Arduino and the motor shield.
+									Since both all of the power was through the wall outlet, I decided to put the Arduino at the rear of the motor,
+									so that the power cables would be out of the way. I designed an Arduino mount in Solidworks that would allow for
+									the Arduino and the motor shield to sit in it without shaking or slipping. I had to account for some tolerance, due to
+									imperfection of the printers</p>
+
+								<a class="image main"><img src="images/PIDLineFollowerBracket.PNG" alt="" /></a>
+								<p>Knowing that PLA is a flexible material, I decided to experiment with
+								it and design a bracket that can hug over the breadboard and clip on the chassis. I also wanted to make the
+								most of the large gaps in the chassis, so that I could route wires through them.
+								Therefore I came up with the design above, which hugs the breadboard that has the IR sensor
+								on it and clamps it on to the chassis, leaving enough room in the gaps that it is attached to, so that I
+								could route the wires through.</p>
+
+								<a class="image main"><img src="images/PIDLineFollowerPlot.png" alt="" /></a>
+								<p>A large part of the project was to write a PID controller for the robot.
+								We wrote a PID controller algorithm that had encoded the wheel speeds for the motors
+								depending on the IR sensor reading closer to corresponsding wheel. Due to time constraints
+								we didn't have much time to tune our PID controller, so it ended up being a PD controller that
+								acted a lot like a bang-bang controller. This can be seen in the plot above, where
+								the wheel speeds look a lot like square waves, even though the sensor readings are not. This was
+								because of our proportional controls being too powerful that the wheel speeds maxed out really quickly
+								and made it look like a bang-bang controller.</p>
+
+								<iframe width="854" height="480" src="https://www.youtube.com/embed/4zWtcc_3dH8"
+								frameborder="0"
+								gesture="media"
+								allowfullscreen>
+								</iframe>
+
 							</section>
 
 				<!-- Footer -->
