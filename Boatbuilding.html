@@ -32,9 +32,42 @@
 				<!-- Main -->
 					<div id="main">
               <section>
-                <p>
-                  Boats
-                </p>
+								<header class="major">
+								<h2><a>Boatbuilding</a></h2>
+								<p>As part of my Quantitative Engineering Analysis class, in a team of two,
+									we built a boat out of shrink wrap and HDF, that floated flat, carried 750g of payload
+									and had an angle of vanishing stability(AVS) between 120 to 140 degrees, within a week.</p>
+									<a class="image main"><img src="images/QEABoat.JPG" alt="" /></a>
+
+							</header>
+							<p>We used Mathematica to do a 3D model of the boat and optimize for the right
+							dimensions to float flat and have the right AVS angle, designed the parts in Solidworks
+							laser-cut the parts and did the assembly, within a week.</p>
+
+							<a class="image main"><img src="images/QEACOMCOB.PNG" alt="" /></a>
+
+							<p>The major challenge that we foresaw before starting the project was the angle of vanishing
+							stability, which was defined by the righting moment that buoyancy exerts about the center of mass.
+							Therefore the first thing we modeled, was the locations of the center of mass and center of buoyancy.
+							As seen in the image above, as the boat tips, the center of buoyancy with respect to the center of mass.
+							Since we could calculate how much the force of buoyancy was, all we had to do was to simulate the moment arm with
+							Mathematica and calculate the moment.</p>
+
+							<a class="image main"><img src="images/QEAAVS.PNG" alt="" /></a>
+
+							<p>Using this information, we plotted the moment arm with respect to the amount of roll of the boat, changed the
+							placement and mass of the payload, until the AVS was in the acceptable range. As seen in the plot below,
+							the righting moment becomes zero at around 138 degrees, which is our AVS.</p>
+
+							<a class="image main"><img src="images/QEACAD2Build.png" alt="" /></a>
+
+							<p>I used Solidworks to CAD our boat, with respect to the parameters that we determined and checked to see if the center
+							of mass is where we calculated it was. After we laser cut the rib, we put the pieces together and wrapped it in shrink wrap.
+						 	Once the boat was physically built, it passed all the tests on the demonstration day, and could float flat and display its
+							AVS of 138 degrees. </p>
+
+							<a class="image main"><img src="images/QEAHanratty.JPG" alt="" /></a>
+
 							</section>
 
 				<!-- Footer -->
