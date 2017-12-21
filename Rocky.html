@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>Onur Talu</title>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Onur Talu</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Portfolio</a></li>
+							<li class="active"><a href="Resume.html">Resume</a></li>
+							<!--<li><a href="elements.html">Elements Reference</a></li>-->
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/onur-t-6431bba9" class="icon fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.github.com/otalu" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+              <section>
+								<header class="major">
+								<h2><a>Stand Up Rocky!</a></h2>
+								<p>As part of my Quantitative Engineering Analysis class, in a team of two, we modelled an inverted
+								pendulum and wrote a PI controller to allow a Pololu Balboa to stand up and remain in its position
+								without drifting, once it was propped up. By the end the project, our robot could stand up without
+								drifting for more than 45 minutes.</p>
+									<a class="image main"><img src="images/RockyGif.gif" alt="" /></a>
+
+							</header>
+							<p>We started off by modelling the motion of an inverted pendulum. With the appendage attached to the robots
+							(as seen in the GIF above) and the weight attached to it at its end, it was a fair assumption to model the robot
+						 	as an inverted pendulum. This allowed us to come up with a controls algorithm that could easily make the robot stand up.
+							The challenge came with trying to limit the translational drift of the robot from its origin, as it was trying to balance.</p>
+
+							<a class="image main"><img src="images/BalanceBlockDiagram.png" alt="" /></a>
+
+							<p>In order to limit the drift of the robot, we implemented another PI controller on the measured velocity of the wheels of
+							the robot. This effectively found the error in position of the robot from its origin position and allowed it to keep standing
+							within a foot of its origin position. The final controls algorithm that we implemented can be seen in the figure above. In total
+							there were three PI controllers, one for the angle of the robot (trying to keep it at 0), one for giving the PWM output to the wheels
+							depending on their velocities and one to prevent drift.</p>
+
+							<a class="image main"><img src="images/PolesPlot.png" alt="" /></a>
+
+							<p>Before using Arduino to do physical implmentation of the controls algortihm that we devised, we used Mathematica to determine
+							numerical values for our controllers. After doing a zero-pole analysis, we tried to keep the poles of our PWM and drift controllers
+							to have all real poles, that are really close to their pairs - in order to have a slightly underdamped system. <br><br>
+							Later, we realized that the drift controller having some imaginary component (allowing for oscillations) made the system more robust,
+							by tolerating a little bit of drift (less than a foot in amplitude). We didn't try to implement	a critically damped system, as we found
+							it to be mechanically not feasible. The poles that have imaginary values belong to the angle controller. Since, overshooting is very easy
+							with the angle controller, we kept the poles that allowed	for a period of about 3 seconds.
+							</p>
+
+							<iframe width="854" height="480"
+							src="https://www.youtube.com/embed/snFDOdirKww"
+							frameborder="0"
+							gesture="media"
+							allowfullscreen>
+							</iframe>
+
+							</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1000 Olin Way MB 601<br />
+								Needham, MA 02492</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(781) 530-86478</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">onur.talu@students.olin.edu</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/onur-t-6431bba9/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://www.github.com/otalu/" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li><!--&copy; Untitled--></li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
