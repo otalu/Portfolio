@@ -2456,10 +2456,12 @@
 				width: 100%;
 			}
 
+/*image main*/
 		.image.main {
 			display: block;
-			margin: 4rem 0;
-			width: 100%;
+			margin: auto;/*4rem 0;*/
+			width: 75%; /*100%;*/
+			padding: 20px;
 		}
 
 			.image.main:first-child {

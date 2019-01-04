@@ -1,0 +1,184 @@
+<html>
+	<head>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112620398-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-112620398-1');
+		</script>
+
+		<title>Onur Talu</title>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Onur Talu</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Portfolio</a></li>
+							<li><a href="Resume.html">Resume</a></li>
+							<li class="active"><a>Olin Electric Motorsports</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/onur-t-6431bba9" class="icon fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.github.com/otalu" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+              <section>
+								<header class="major">
+								<h2><a>Vehicle Dynamics</a></h2>
+								<p>I've joined <a href="https://www.olinelectricmotorsports.com/">Olin Electric Motorsports</a> on my first week at Olin,
+								without knowing anything about vehicle design or Formula Electric. By the end of my second year in the team I had designed
+								the entire rear suspension geometry of Mk.III, the third FSAE Electric car our team had made. This year, I'm working on
+								designing an improved suspension geometry and chassis for Mk. IV. </p>
+
+								<a class="image main"><img src="images/OEMTeam.png" alt="" /></a>
+								<p>OEM Team 2017-2018 with Mk.III at Formula North</p>
+								</header
+
+                <p>
+                <h3>Rear Suspension Geometry of Mk. III</h3>
+								Designing the suspension geometry was a new endeavour for our team. There were no designated subteams for the suspension
+								geometry for Mk. I and Mk. II, and because of that there was not a lot of accumulated knowledge in the team about suspension
+								geometry. Therefore, Mk. III was a learning opportunity for me and my only other teammate who focused on suspension geometry. </p>
+
+								<a class="image main"><img src="images/Rear.PNG" alt="" /></a>
+
+								<header class="major">
+								<p>A finalized Solidworks model of Mk.III's rear suspension geometry.</p>
+								</header>
+
+								<p>The majority of our design cycle consisted of doing research, mostly through reading resources like "Race Car Vehicle Dynamics"
+								by Milliken & Milliken". Only after having a good understanding of the main concepts - such as ride freqeuncies and roll centers -
+								did we start designing the suspension.</p>
+								<a class="image main"><img src="images/FVSAPlot.png" alt="" /></a>
+								<header class="major">
+								<p>A MATLAB plot of our FVSA position analysis. We analyzed instant center migration to reduce roll center migration as the wheel travels.</p>
+								</header>
+
+								<p>We made a design study in Solidworks, so that we could simulate the suspension movement as we
+								changed the wheel and shock travels and record the hardpoints. We wrote a MATLAB script that took in the hardpoint coordinates
+								and calculated important parameters, such as roll center locations and the motion ratios of the rocker design. </p>
+								<a class="image main"><img src="images/AdamsFront.png" alt="" /></a>
+								<header class="major">
+
+								<p>The Adams Car setup of Mk.III. We used Adams Car to do a more thorough analysis of the suspension geometry, by testing it through different
+									cases, such as acceleration, constant radius turn and pure roll.</p>
+								</header>
+
+								<p>Finally, we used Adams Car to validate our MATLAB models and do further analysis on our suspension geometry that we couldn't easily do with
+								MATLAB. Adams Car is a vehicle dynamics simulation software that enabled us to import our suspension by entering in the suspension hardpoint
+								coordinates around run certain tests on it, such as acceleration, roll or constant radius turn.</p>
+
+								<a class="image main"><img src="images/AdamsPlot.png" alt="" /></a>
+								<header class="major">
+
+								<p>The toe and camber change in our front suspension with degrees of roll.</p>
+								</header>
+
+								<p>
+                <h3>Welding Jig for Mk. III's Suspension Tabs</h3>
+								What is as important as designing a suspension geometry, well suited for your goals and interests, is to be able to manufacture it. We get our
+								chassis welded by a professional company, however, we weld our own control arms and tabs to the chassis. The accuracy of our analysis and motion
+								studies are entirely reliant on the accuracy of our manufacture to our design. Therefore, we decided to build a jig that fully constrained our suspension
+								tabs to their ideal locations.
+
+								<a class="image main"><img src="images/MkIIIJigCAD.png" alt="" /></a>
+								<header class="major">
+
+								<p>Solidworks CAD of the jig for the front suspension. All yellow parts were printed with a 3D printer out of PLA.</p>
+								</header>
+								</p>
+
+								<p>In order to weld the suspension tabs accurately to the positions and orientations we had designed them in, I designed a reference plate that would
+								be clamped to the wheel plate to locate the outboard system. This wheel plate was on the wheel center plane and held all of our outboard system - knuckle,
+							 	hub, and the control arms - and if accurately located with respect to the chassis would allow us to weld the suspension tabs accurately.</p>
+								<p>Using Solidworks' Surfaces toolbox, I designed 3D printed brackets (in yellow in the CAD above and the photos below) that are snap fits to the chassis
+								and house tubes that connect to similar brackets on the reference plate. Once we set the caster and camber angles with a digital protractor and measured the
+								toe between the two wheel plates all the tabs found their positions on the chassis.</p>
+
+								<a class="image main"><img src="images/MkIIIJig.png" alt="" /></a>
+								<header class="major">
+
+								<p>The welding jig assembled. Though the 3D printed brackets were snap fits, they were secured with zip-ties to prevent flexure.</p>
+								</header>
+								</p>
+
+								<p>Although this jig worked pretty reliably and allowed us to weld our tabs, it had its downsides. First of all, it relied on 3D printed fixtures, which have
+								some play to them that introduces an overall error to the system. We were able to mitigate this problem, by doing measurements with respect to known points on
+								the chassis, however it made the tacking procedure very long. Moreover, the two plate system required the use of multiple clamps, which also increased jigging
+								time.</p>
+
+								<p>Another fundamental fault of this jigging procedure was the fact that it referenced the chassis. This makes our jigging procedure vulnerable to inaccuracies
+								between the CAD and the welded frame that we receive. Even though the frame is usually very accurate to the design we send out, there were discrepancies between our
+								design and the frame in the past. Therefore for Mk.IV, we are working on a jig that is based on a universal reference frame that the chassis will be fixed to.</p>
+
+								<a class="image main"><img src="images/MkIIIWeld.jpg" alt="" /></a>
+								<header class="major">
+
+								<p>Rear suspension tabs fully tacked. </p>
+								</header>
+								</p>
+						</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1000 Olin Way MB 601<br />
+								Needham, MA 02492</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="tel:+17815308647">(781) 530-8647</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:onur.talu@students.olin.edu">onur.talu@students.olin.edu</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/onur-t-6431bba9/" class="icon alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://www.github.com/otalu/" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li><!--&copy; Untitled--></li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
